@@ -14,6 +14,15 @@
     </style>
   </head>
   <body>
-    <img src="adbanner.png"  />
+    <img id="myImage" src="adbanner.png" style="width:100%"  />
+
+    
+    <script>      
+      window.setInterval(function() {
+        console.log("updating")
+        var myImageElement = document.getElementById('myImage');
+        myImageElement.src = 'adbanner.png?rand=' + Math.random();
+      }, 5000);
+    </script>
   </body>
 </html>
